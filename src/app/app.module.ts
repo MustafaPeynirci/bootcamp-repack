@@ -11,7 +11,6 @@ import { InstructorListComponent } from './components/instructor/instructor-list
 import { InstructorUpdateComponent } from './components/instructor/instructor-update/instructor-update/instructor-update.component';
 import { ApplicantAddComponent } from './components/applicant/applicant-add/applicant-add/applicant-add.component';
 import { ApplicantListComponent } from './components/applicant/applicant-list/applicant-list/applicant-list.component';
-import { AplicantUpdateComponent } from './components/applicant/applicant-update/aplicant-update/aplicant-update.component';
 import { ApplicantUpdateComponent } from './components/applicant/applicant-update/applicant-update/applicant-update.component';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { ApplicantUpdateComponent } from './components/applicant/applicant-updat
     InstructorUpdateComponent,
     ApplicantAddComponent,
     ApplicantListComponent,
-    AplicantUpdateComponent,
     ApplicantUpdateComponent
   ],
   imports: [
