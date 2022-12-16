@@ -20,12 +20,42 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/app/public/skydash/images"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-toastr/toastr.css",
+              "./src/app/public/skydash/css/vertical-layout-light/style.css",
+              "./src/app/public/skydash/vendors/feather/feather.css",
+              "./src/app/public/skydash/vendors/css/vendor.bundle.base.css",
+              "./src/app/public/skydash/vendors/datatables.net-bs4/dataTables.bootstrap4.css",
+              "./src/app/public/skydash/vendors/ti-icons/css/themify-icons.css",
+              "./src/app/public/skydash/js/select.dataTables.min.css",
+              "./src/app/public/skydash/vendors/select2/select2.min.css",
+              "./src/app/public/skydash/vendors/select2-bootstrap-theme/select2-bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "./node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./src/app/public/skydash/vendors/js/vendor.bundle.base.js",
+              "./src/app/public/skydash/vendors/chart.js/Chart.min.js",
+              "./src/app/public/skydash/vendors/datatables.net/jquery.dataTables.js",
+              "./src/app/public/skydash/vendors/datatables.net-bs4/dataTables.bootstrap4.js",
+              "./src/app/public/skydash/js/dataTables.select.min.js",
+              "./src/app/public/skydash/js/off-canvas.js",
+              "./src/app/public/skydash/js/hoverable-collapse.js",
+              "./src/app/public/skydash/js/template.js",
+              "./src/app/public/skydash/js/settings.js",
+              "./src/app/public/skydash/js/todolist.js",
+              "./src/app/public/skydash/js/dashboard.js",
+              "./src/app/public/skydash/js/Chart.roundedBarCharts.js",
+              "./src/app/public/skydash/vendors/select2/select2.min.js",
+              "./src/app/public/skydash/js/select2.js"
+            ]
           },
           "configurations": {
             "production": {

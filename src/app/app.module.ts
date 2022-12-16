@@ -12,6 +12,13 @@ import { InstructorUpdateComponent } from './components/instructor/instructor-up
 import { ApplicantAddComponent } from './components/applicant/applicant-add/applicant-add/applicant-add.component';
 import { ApplicantListComponent } from './components/applicant/applicant-list/applicant-list/applicant-list.component';
 import { ApplicantUpdateComponent } from './components/applicant/applicant-update/applicant-update/applicant-update.component';
+import { PanelComponent } from './layout/panel/panel/panel.component';
+import { PanelIndexComponent } from './components/panel-index/panel-index/panel-index.component';
+import { FooterComponent } from './layout/footer/footer/footer.component';
+import { NaviComponent } from './layout/navi/navi/navi.component';
+import { SidebarComponent } from './layout/sidebar/sidebar/sidebar.component';
+import { HomeComponent } from './components/home/home/home.component';
+import { IndexComponent } from './components/index/index/index.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +31,14 @@ import { ApplicantUpdateComponent } from './components/applicant/applicant-updat
     InstructorUpdateComponent,
     ApplicantAddComponent,
     ApplicantListComponent,
-    ApplicantUpdateComponent
+    ApplicantUpdateComponent,
+    PanelComponent,
+    PanelIndexComponent,
+    FooterComponent,
+    NaviComponent,
+    SidebarComponent,
+    HomeComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
