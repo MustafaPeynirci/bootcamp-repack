@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http'
+
 import { EmployeeAddComponent } from './components/employee/employee-add/employee-add/employee-add.component';
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list/employee-list.component';
 import { EmployeeUpdateComponent } from './components/employee/employee-update/employee-update/employee-update.component';
@@ -19,6 +21,7 @@ import { NaviComponent } from './layout/navi/navi/navi.component';
 import { SidebarComponent } from './layout/sidebar/sidebar/sidebar.component';
 import { HomeComponent } from './components/home/home/home.component';
 import { IndexComponent } from './components/index/index/index.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { IndexComponent } from './components/index/index/index.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

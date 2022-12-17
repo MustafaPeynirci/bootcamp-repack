@@ -1,48 +1,61 @@
 {
-    "users":[
-        {
-            "firstName": "Mustafa",
-            "lastName": "Peynirci",
-            "email": "mustafa@gmail.com",
-            "password": "12345",
-            "nationalIdentity": 12345678901,
-            "dateOfBirth": "22-05-2001",
-            "position": "Specialist",
-            "token": "BDKUSEFGHGDNGDBGEUEHELG",
-            "role": "ROLE_EMPLOYEE",
-            "expiraiton": "16-12-2023",
-            "id": 1
-        }
-    ],
-    "bootcamps":[
-        {
-            "instructorId": "1",
-            "name": "MILTEK Front-end Developer Bootcamp",
-            "dateStart": "14-11-2022",
-            "dateEnd": "12-12-2022",
-            "state": "1",
-            "explanation": "It is the last of the important trainings held twice a year.",
-            "instructorName": "Engin Demiroğ",
-            "id": 1
-        }
-    ],
-    "applications":[
-        {
-            "bootcampId": 1,
-            "bootcampName": "MILTEK Front-end Developer Bootcamp",
-            "applicantName": "Gürhan Koz",
-            "applicantId": "2",
-            "applicationState": "PENDING",
-            "id": 1
-        }
-    ],
-    "blacklist":[
-        {
-            "reason": "He registered but did not come",
-            "date": "14-11-2022",
-            "applicantId": "2",
-            "applicantName": "Gürhan Koz",
-            "id": 1
-        }
-    ]
+  "users": [
+    {
+      "firstName": "Mustafa",
+      "lastName": "Peynirci",
+      "email": "mustafa@gmail.com",
+      "password": "12345",
+      "nationalIdentity": 12345678901,
+      "dateOfBirth": "22-05-2001",
+      "position": "Specialist",
+      "token": "BDKUSEFGHGDNGDBGEUEHELG",
+      "role": "ROLE_EMPLOYEE",
+      "expiraiton": "16-12-2023",
+      "id": 1
+    },
+    {
+      "firstName": "mustafaa",
+      "lastName": "peynircii",
+      "email": "mustafaa@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678909",
+      "dateOfBirth": "2022-12-17",
+      "about": "aboutt",
+      "state": 1,
+      "role": "ROLE_APPLİCANT",
+      "token": "17.12.2022 18:43:32",
+      "id": 2
+    }
+  ],
+  "bootcamps": [
+    {
+      "instructorId": "1",
+      "name": "MILTEK Front-end Developer Bootcamp",
+      "dateStart": "14-11-2022",
+      "dateEnd": "12-12-2022",
+      "state": "1",
+      "explanation": "It is the last of the important trainings held twice a year.",
+      "instructorName": "Engin Demiroğ",
+      "id": 1
+    }
+  ],
+  "applications": [
+    {
+      "bootcampId": 1,
+      "bootcampName": "MILTEK Front-end Developer Bootcamp",
+      "applicantName": "Gürhan Koz",
+      "applicantId": "2",
+      "applicationState": "PENDING",
+      "id": 1
+    }
+  ],
+  "blacklist": [
+    {
+      "reason": "He registered but did not come",
+      "date": "14-11-2022",
+      "applicantId": "2",
+      "applicantName": "Gürhan Koz",
+      "id": 1
+    }
+  ]
 }

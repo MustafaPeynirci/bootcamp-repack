@@ -1,8 +1,8 @@
 <div class="col-md-12 grid-margin">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Applicant Add</h4>
-        <form class="form-sample">
+        <h4 class="card-title">Applicant Add</h4>  
+        <form class="form-sample" [formGroup]="addApplicantForm">
           <p class="card-description">
             Info
           </p>
@@ -67,7 +67,7 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="btn btn-info">Add</button>
+            <button type="button" class="btn btn-info" (click)="addApplicant()">Add</button>
           </div>
         </form>
       </div>
