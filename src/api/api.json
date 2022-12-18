@@ -25,6 +25,32 @@
       "role": "ROLE_APPLİCANT",
       "token": "17.12.2022 18:43:32",
       "id": 2
+    },
+    {
+      "firstName": "asd",
+      "lastName": "dsa",
+      "email": "mustafa@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "ds",
+      "dateOfBirth": "2022-12-18",
+      "about": "ads",
+      "state": 1,
+      "role": "ROLE_APPLİCANT",
+      "token": "18.12.2022 16:33:53",
+      "id": 3
+    },
+    {
+      "firstName": "hhhh",
+      "lastName": "yyyy",
+      "email": "mustafa@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "fhhf",
+      "dateOfBirth": "2022-12-18",
+      "about": "hff",
+      "state": 1,
+      "role": "ROLE_APPLİCANT",
+      "token": "18.12.2022 16:47:40",
+      "id": 4
     }
   ],
   "bootcamps": [

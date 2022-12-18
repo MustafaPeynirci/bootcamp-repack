@@ -10,26 +10,23 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
-                <th>National Identy</th>
+                <th>National Identity</th>
                 <th>About</th>
-                <th>Date Of Bird</th>
+                <th>Date Of Birth</th>
                 <th>Manage</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="tr-height">
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-                <td>e</td>
-                <td>f</td>
-                <td><button type="button" class="btn btn-outline-info btn-sm"
-                  
-                    routerLink="applicant-update/1">Update</button>
-                  <button type="button" class="btn btn-outline-danger btn-sm ml-2"
-                   routerLink="blacklist-add/">Add
-                    Black List</button>
+              <tr class="tr-height" *ngFor="let applicant of allApplicantsList">
+                <td>{{applicant.firstName}}</td>
+                <td>{{applicant.lastName}}</td>
+                <td>{{applicant.email}}</td>
+                <td>{{applicant.nationalIdentity}}</td>
+                <td>{{applicant.about}}</td>
+                <td>{{applicant.dateOfBirth}}</td>
+                <td>
+                  <button type="button" class="btn btn-outline-info btn-sm" routerLink="applicant-update/{{applicant.id}}">Update</button>
+                  <button type="button" class="btn btn-outline-danger btn-sm ml-2" routerLink="blacklist-add/">Add Black List</button>
                 </td>
               </tr>
             </tbody>
