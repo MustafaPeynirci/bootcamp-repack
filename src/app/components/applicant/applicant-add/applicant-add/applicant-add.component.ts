@@ -34,6 +34,7 @@ export class ApplicantAddComponent implements OnInit {
       state: [1]
     })
   }
+  
   addApplicant(){
     if(this.addApplicantForm.valid){
         let applicantModel = Object.assign({}, this.addApplicantForm.value)

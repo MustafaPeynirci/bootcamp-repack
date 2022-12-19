@@ -1,1 +1,75 @@
-<p>employee-add works!</p>
+<div class="col-md-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Employee Add</h4>
+        <form class="form-sample" [formGroup]="addEmployeeForm" *ngIf="addEmployeeForm">
+          <p class="card-description">
+            Info
+          </p>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">First Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" formControlName="firstName" placeholder="first name"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Last Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" formControlName="lastName" placeholder="last name"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="email" placeholder="@email"/>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Password</label>
+                <div class="col-sm-9">
+                  <input type="password" class="form-control" formControlName="password" placeholder="password"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">National Identity</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="nationalIdentity" placeholder="national identity"/>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Position</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="position" placeholder="position"/>
+                  </div>
+                </div>
+              </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Date Of Birth</label>
+                <div class="col-sm-9">
+                    <input type="date" class="form-control" formControlName="dateOfBirth" placeholder="dd/mm/yyyy"/>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-info" (click)="addEmployee()">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
