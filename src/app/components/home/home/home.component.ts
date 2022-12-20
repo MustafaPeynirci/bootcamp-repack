@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  today: Date = new Date()
+  date:any = this.today.getDate() + "-" + this.today.getMonth() + "-" + this.today.getFullYear()
+
   constructor() { }
 
   ngOnInit(): void {
