@@ -22,6 +22,9 @@ import { SidebarComponent } from './layout/sidebar/sidebar/sidebar.component';
 import { HomeComponent } from './components/home/home/home.component';
 import { IndexComponent } from './components/index/index/index.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BootcampAddComponent } from './components/bootcamp/bootcamp-add/bootcamp-add/bootcamp-add.component';
+import { BootcampListComponent } from './components/bootcamp/bootcamp-list/bootcamp-list/bootcamp-list.component';
+import { BootcampUpdateComponent } from './components/bootcamp/bootcamp-update/bootcamp-update/bootcamp-update.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     NaviComponent,
     SidebarComponent,
     HomeComponent,
-    IndexComponent
+    IndexComponent,
+    BootcampAddComponent,
+    BootcampListComponent,
+    BootcampUpdateComponent
   ],
   imports: [
     BrowserModule,

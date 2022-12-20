@@ -1,0 +1,77 @@
+<div class="col-md-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Bootcamp Add</h4>
+        <form class="form-sample" [formGroup]="addBootcampForm">
+          <p class="card-description">
+            Info
+          </p>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Instructor</label>
+                <div class="col-sm-9">
+                  <select class="form-select" style="padding:0.7em;" formControlName="instructorId" >
+                    <option value="" selected disabled hidden>Select Instructor</option>
+                    <option *ngFor="let instructor of instructors" value="{{instructor.id}}" id="instructorId" class="form-control">
+                      {{instructor.firstName}} {{instructor.lastName}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="Bootcamp Name" formControlName="name" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Date Start</label>
+                <div class="col-sm-9">
+                  <input type="date" class="form-control" placeholder="dd/MM/yyyy" formControlName="dateStart" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Date End</label>
+                <div class="col-sm-9">
+                  <input type="date" class="form-control" placeholder="dd/MM/yyyy" formControlName="dateEnd" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">State</label>
+                <div class="col-sm-9">
+                  <select class="form-select" style="padding:0.7em;" formControlName="state" id="state">
+                    <option value="" selected disabled hidden>Select State</option>
+                    <option id="state" class="form-control" value="0">Passive</option>
+                    <option id="state" class="form-control" value="1">Active</option>
+                  </select>
+                  <!-- <input type="text" class="form-control" placeholder="State" formControlName="state" /> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Explanation</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="Explanation" formControlName="explanation" />
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-info" (click)="addBootcamp()">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

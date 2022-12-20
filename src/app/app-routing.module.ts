@@ -1,3 +1,6 @@
+import { BootcampUpdateComponent } from './components/bootcamp/bootcamp-update/bootcamp-update/bootcamp-update.component';
+import { BootcampAddComponent } from './components/bootcamp/bootcamp-add/bootcamp-add/bootcamp-add.component';
+import { BootcampListComponent } from './components/bootcamp/bootcamp-list/bootcamp-list/bootcamp-list.component';
 import { EmployeeUpdateComponent } from './components/employee/employee-update/employee-update/employee-update.component';
 import { EmployeeAddComponent } from './components/employee/employee-add/employee-add/employee-add.component';
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list/employee-list.component';
@@ -25,6 +28,10 @@ const routes: Routes = [
       { path: "employee-list", component: EmployeeListComponent },
       { path: "employee-add", component: EmployeeAddComponent },
       { path: "employee-list/employee-update/:id", component: EmployeeUpdateComponent },
+
+      { path: "bootcamp-list", component: BootcampListComponent },
+      { path: "bootcamp-add", component: BootcampAddComponent },
+      { path: "bootcamp-list/bootcamp-update/:id", component: BootcampUpdateComponent }
 
     ]
   }

@@ -1,0 +1,106 @@
+<div class="col-md-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Bootcamp Update</h4>
+        <form class="form-sample" [formGroup]="bootcampUpdateForm" *ngIf="bootcampUpdateForm">
+          <p class="card-description">
+            Info
+          </p>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Instructor</label>
+                <div class="col-sm-9">
+                  <select class="form-select" style="padding:0.7em;" formControlName="instructorId">
+                    <option *ngFor="let instructor of instructors" value="{{instructor.id}}" id="instructorId" class="form-control">
+                      {{instructor.firstName}} {{instructor.lastName}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="Bootcamp Name" formControlName="name" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Date Start</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="dd/MM/yyyy" formControlName="dateStart" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Date End</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="dd/MM/yyyy" formControlName="dateEnd" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">State</label>
+                <div class="col-sm-9">
+                  <select class="form-select" style="padding:0.7em;" formControlName="state" id="state">
+                    <option id="state" class="form-control" value="0">Passive</option>
+                    <option id="state" class="form-control" value="1">Active</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Explanation</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="Explanation" formControlName="explanation" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center">
+              <div class="col-md-3">
+                <button type="button" class="btn btn-outline-info w-100" (click)="updateBootcamp()">Update</button>
+              </div>
+              <div class="col-md-3">
+                <button type="button" class="btn btn-outline-danger w-100" data-toggle="modal" data-target="#deleteModal">Delete</button>
+              </div>
+                <!-- Modal -->
+                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="false">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="deleteModalLabel">Delete Account</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                            Are you sure about delete ?
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary"
+                                  data-dismiss="modal">Cancel</button>
+                              <button type="button" class="btn btn-danger" data-dismiss="modal"
+                              (click)="deleteBootcamp()">Delete</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Modal end -->
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- <app-applicant-list-of-bootcamp></app-applicant-list-of-bootcamp> -->
