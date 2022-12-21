@@ -25,6 +25,19 @@
       "role": "ROLE_APPLICANT",
       "expiration": null,
       "id": 3
+    },
+    {
+      "firstName": "Engin",
+      "lastName": "Demiroğ",
+      "email": "engin@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678903",
+      "dateOfBirth": "2022-12-21",
+      "companyName": "Kodlama.io",
+      "token": "21.12.2022 15:32:14",
+      "role": "ROLE_INSTRUCTOR",
+      "expiration": null,
+      "id": 4
     }
   ],
   "bootcamps": [

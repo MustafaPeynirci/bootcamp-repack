@@ -1,3 +1,5 @@
+import { InstructorService } from './../../../../services/instructor/instructor.service';
+import { IInstructorAllModel } from './../../../../models/instructor/InstructorAllModel';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstructorListComponent implements OnInit {
 
-  constructor() { }
+  allInstructors:IInstructorAllModel[] = []
+
+  constructor(private instructorService:InstructorService) { }
 
   ngOnInit(): void {
+    this.getAllInstructors()
+  }
+
+  getAllInstructors(){
+    this.instructorService.getAllInstructors().subscribe((data)=>{
+      this.allInstructors = data
+    })
   }
 
 }

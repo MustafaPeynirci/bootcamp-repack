@@ -1,3 +1,6 @@
+import { InstructorUpdateComponent } from './components/instructor/instructor-update/instructor-update/instructor-update.component';
+import { InstructorAddComponent } from './components/instructor/instructor-add/instructor-add/instructor-add.component';
+import { InstructorListComponent } from './components/instructor/instructor-list/instructor-list/instructor-list.component';
 import { BootcampUpdateComponent } from './components/bootcamp/bootcamp-update/bootcamp-update/bootcamp-update.component';
 import { BootcampAddComponent } from './components/bootcamp/bootcamp-add/bootcamp-add/bootcamp-add.component';
 import { BootcampListComponent } from './components/bootcamp/bootcamp-list/bootcamp-list/bootcamp-list.component';
@@ -31,7 +34,11 @@ const routes: Routes = [
 
       { path: "bootcamp-list", component: BootcampListComponent },
       { path: "bootcamp-add", component: BootcampAddComponent },
-      { path: "bootcamp-list/bootcamp-update/:id", component: BootcampUpdateComponent }
+      { path: "bootcamp-list/bootcamp-update/:id", component: BootcampUpdateComponent },
+
+      { path: "instructor-list", component: InstructorListComponent },
+      { path: "instructor-add", component: InstructorAddComponent },
+      { path: "instructor-list/instructor-update/:id", component: InstructorUpdateComponent }
 
     ]
   }
