@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { IApplicantUpdateRequestModel } from './../../../../models/applicant/ApplicantUpdateRequestModel';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -18,7 +19,8 @@ export class ApplicantUpdateComponent implements OnInit {
     private applicantService:ApplicantService,
     private formBuilder:FormBuilder,
     private activatedRoute:ActivatedRoute,
-    private router:Router
+    private router:Router,
+    private toastr:ToastrService
     ) { }
 
   ngOnInit(): void {
@@ -53,16 +55,18 @@ export class ApplicantUpdateComponent implements OnInit {
       let getApplicant = Object.assign({}, this.applicantUpdateForm.value)
       this.applicantService.updateApplicant(this.getApplicant.id, getApplicant).subscribe((data)=>{
         this.router.navigate(['admin-panel/applicant-list'])
+        this.toastr.success('Update Successful')
       })
     }
     else{
-
+      this.toastr.error('Update Failed')
     }
   }
 
   deleteApplicant(){
     this.applicantService.deleteApplicant(this.getApplicant.id).subscribe((data)=>{
       this.router.navigate(['admin-panel/applicant-list'])
+      this.toastr.success('Delete Successful')
     })
   }
 

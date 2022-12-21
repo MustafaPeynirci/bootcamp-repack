@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { ApplicantService } from './../../../../services/applicant/applicant.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -15,7 +16,8 @@ export class ApplicantAddComponent implements OnInit {
   constructor(
     private applicantService:ApplicantService, 
     private formBuilder:FormBuilder, 
-    private router:Router
+    private router:Router,
+    private toastr:ToastrService
     ) { }
 
   ngOnInit(): void {
@@ -43,10 +45,11 @@ export class ApplicantAddComponent implements OnInit {
         this.addApplicantForm.reset()
         this.applicantService.addApplicant(applicantModel).subscribe((data) => {
           this.router.navigate(['admin-panel/applicant-list'])
+          this.toastr.success('Adding Successful')
       })
     }
     else{
-     
+      this.toastr.error('Adding Failed')
     }
   }
 

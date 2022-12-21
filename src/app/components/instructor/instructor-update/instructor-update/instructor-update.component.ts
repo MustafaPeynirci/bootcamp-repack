@@ -20,7 +20,7 @@ export class InstructorUpdateComponent implements OnInit {
     private formBuilder:FormBuilder,
     private activatedRoute:ActivatedRoute,
     private router:Router,
-    private toastrService:ToastrService
+    private toastr:ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -54,18 +54,18 @@ export class InstructorUpdateComponent implements OnInit {
       let instructorModel = Object.assign({}, this.instructorUpdateForm.value)
       this.instructorService.updateInstructor(this.instructor.id, instructorModel).subscribe((data)=>{
         this.router.navigate(['admin-panel/instructor-list'])
-        this.toastrService.success('Successful Update')
+        this.toastr.success('Update Successful')
       })
     }
     else{
-      this.toastrService.error('Failed Update')
+      this.toastr.error('Update Failed')
     }
   }
 
   deleteInstructor(){
     this.instructorService.deleteInstructor(this.instructor.id).subscribe((data)=>{
       this.router.navigate(['admin-panel/instructor-list'])
-
+      this.toastr.success('Delete Successful')
     })
   }
 

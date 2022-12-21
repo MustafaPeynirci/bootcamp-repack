@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeService } from './../../../../services/employee/employee.service';
 import { IEmployeeUpdateRequestModel } from './../../../../models/employee/EmployeeUpdateRequestModel';
@@ -18,7 +19,8 @@ export class EmployeeUpdateComponent implements OnInit {
     private employeeService:EmployeeService,
     private formBuilder:FormBuilder,
     private activatedRoute:ActivatedRoute,
-    private router:Router
+    private router:Router,
+    private toastr:ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -52,16 +54,18 @@ export class EmployeeUpdateComponent implements OnInit {
       let getEmployee = Object.assign({}, this.employeeUpdateForm.value)
       this.employeeService.updateEmployee(this.getEmployee.id, getEmployee).subscribe((data)=>{
         this.router.navigate(['admin-panel/employee-list'])
+        this.toastr.success('Update Successful')
       })
     }
     else{
-
+      this.toastr.error('Update Failed')
     }
   }
 
   deleteEmployee(){
     this.employeeService.deleteEmployee(this.getEmployee.id).subscribe((data)=>{
       this.router.navigate(['admin-panel/employee-list'])
+      this.toastr.success('Delete Successful')
     })
   }
 

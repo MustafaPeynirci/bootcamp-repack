@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { IInstructorAllModel } from './../../../../models/instructor/InstructorAllModel';
 import { InstructorService } from './../../../../services/instructor/instructor.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -22,7 +23,8 @@ export class BootcampUpdateComponent implements OnInit {
     private instructorService:InstructorService,
     private formBuilder:FormBuilder,
     private activatedRoute:ActivatedRoute,
-    private router:Router
+    private router:Router,
+    private toastr:ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -55,18 +57,19 @@ export class BootcampUpdateComponent implements OnInit {
         this.bootcampUpdateForm.reset()
         this.bootcampService.updateBootcamp(this.getBootcamp.id, bootcampModel).subscribe((data)=>{
           this.router.navigate(['admin-panel/bootcamp-list'])
-
+          this.toastr.success('Update Successfull')
         })
       })
     }
     else{
-
+      this.toastr.error('Update Failed')
     }
   }
 
   deleteBootcamp(){
     this.bootcampService.deleteBootcamp(this.getBootcamp.id).subscribe((data)=>{
       this.router.navigate(["admin-panel/bootcamp-list"])
+      this.toastr.success('Delete Successful')
     })
   }
 

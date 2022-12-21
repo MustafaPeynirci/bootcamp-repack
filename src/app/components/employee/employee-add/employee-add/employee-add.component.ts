@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { EmployeeService } from './../../../../services/employee/employee.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -15,7 +16,8 @@ export class EmployeeAddComponent implements OnInit {
   constructor(
     private employeeService:EmployeeService,
     private formBuilder:FormBuilder,
-    private router:Router
+    private router:Router,
+    private toastr:ToastrService
     ) { }
 
   ngOnInit(): void {
@@ -42,10 +44,11 @@ export class EmployeeAddComponent implements OnInit {
         this.addEmployeeForm.reset()
         this.employeeService.addEmployee(employeeModel).subscribe((data)=>{
           this.router.navigate(['admin-panel/employee-list'])
+          this.toastr.success('Adding Successful')
       })
     }
     else{
-
+      this.toastr.error('Adding Failed')
     }
 
   }

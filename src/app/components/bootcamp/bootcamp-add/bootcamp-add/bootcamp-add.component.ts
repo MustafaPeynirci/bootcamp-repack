@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { IInstructorAllModel } from './../../../../models/instructor/InstructorAllModel';
 import { InstructorService } from './../../../../services/instructor/instructor.service';
 import { IBootcampAllModel } from './../../../../models/bootcamp/BootcampAllModel';
@@ -21,7 +22,8 @@ export class BootcampAddComponent implements OnInit {
     private bootcampService:BootcampService,
     private instructorService:InstructorService,
     private formBuilder:FormBuilder,
-    private router:Router
+    private router:Router,
+    private toastr:ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -47,12 +49,12 @@ export class BootcampAddComponent implements OnInit {
         this.bootcampService.addBootcamp(bootcampModel).subscribe((data)=>{
           this.addBootcampForm.reset()
           this.router.navigate(['admin-panel/bootcamp-list'])
-          
+          this.toastr.success('Adding Successful')
         })
       })
     }
     else{
-
+      this.toastr.error('Adding Failed')
     }
   }
 

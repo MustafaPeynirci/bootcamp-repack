@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { InstructorService } from './../../../../services/instructor/instructor.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -15,7 +16,8 @@ export class InstructorAddComponent implements OnInit {
   constructor(
     private instructorService:InstructorService,
     private formBuilder:FormBuilder,
-    private router:Router
+    private router:Router,
+    private toastr:ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -42,11 +44,11 @@ export class InstructorAddComponent implements OnInit {
       this.addInstructorForm.reset()
       this.instructorService.addInstructor(instructorModel).subscribe((data)=>{
         this.router.navigate(['admin-panel/instructor-list'])
-        
+        this.toastr.success('Adding Successful')
       })
     }
     else{
-
+      this.toastr.error('Adding Failed')
     }
   }
 
