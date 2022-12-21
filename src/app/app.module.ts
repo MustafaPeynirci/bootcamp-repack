@@ -27,6 +27,9 @@ import { BootcampListComponent } from './components/bootcamp/bootcamp-list/bootc
 import { BootcampUpdateComponent } from './components/bootcamp/bootcamp-update/bootcamp-update/bootcamp-update.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BlacklistAddComponent } from './components/blacklist/blacklist-add/blacklist-add/blacklist-add.component';
+import { BlacklistListComponent } from './components/blacklist/blacklist-list/blacklist-list/blacklist-list.component';
+import { BlacklistUpdateComponent } from './components/blacklist/blacklist-update/blacklist-update/blacklist-update.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     IndexComponent,
     BootcampAddComponent,
     BootcampListComponent,
-    BootcampUpdateComponent
+    BootcampUpdateComponent,
+    BlacklistAddComponent,
+    BlacklistListComponent,
+    BlacklistUpdateComponent
   ],
   imports: [
     BrowserModule,
