@@ -1,3 +1,5 @@
+import { BlacklistAddComponent } from './components/blacklist/blacklist-add/blacklist-add/blacklist-add.component';
+import { BlacklistListComponent } from './components/blacklist/blacklist-list/blacklist-list/blacklist-list.component';
 import { InstructorUpdateComponent } from './components/instructor/instructor-update/instructor-update/instructor-update.component';
 import { InstructorAddComponent } from './components/instructor/instructor-add/instructor-add/instructor-add.component';
 import { InstructorListComponent } from './components/instructor/instructor-list/instructor-list/instructor-list.component';
@@ -38,7 +40,11 @@ const routes: Routes = [
 
       { path: "instructor-list", component: InstructorListComponent },
       { path: "instructor-add", component: InstructorAddComponent },
-      { path: "instructor-list/instructor-update/:id", component: InstructorUpdateComponent }
+      { path: "instructor-list/instructor-update/:id", component: InstructorUpdateComponent },
+
+      { path: "blacklist", component: BlacklistListComponent },
+      { path: "applicant-list/blacklist-add/:id", component: BlacklistAddComponent }
+     
 
     ]
   }
