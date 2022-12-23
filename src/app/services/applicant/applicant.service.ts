@@ -40,4 +40,10 @@ export class ApplicantService {
     )
   }
 
+  updateApplicantState(id:number, stateval:number):Observable<IApplicantUpdateRequestModel>{
+    return this.httpClient.patch<IApplicantUpdateRequestModel>(
+      this.apiUrl + "/" + id, { state:stateval }
+    )
+  }
+
 }
