@@ -30,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BlacklistAddComponent } from './components/blacklist/blacklist-add/blacklist-add/blacklist-add.component';
 import { BlacklistListComponent } from './components/blacklist/blacklist-list/blacklist-list/blacklist-list.component';
 import { BlacklistUpdateComponent } from './components/blacklist/blacklist-update/blacklist-update/blacklist-update.component';
+import { LoginComponent } from './components/login/login/login.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { BlacklistUpdateComponent } from './components/blacklist/blacklist-updat
     BootcampUpdateComponent,
     BlacklistAddComponent,
     BlacklistListComponent,
-    BlacklistUpdateComponent
+    BlacklistUpdateComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
