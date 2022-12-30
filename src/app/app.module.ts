@@ -31,6 +31,10 @@ import { BlacklistAddComponent } from './components/blacklist/blacklist-add/blac
 import { BlacklistListComponent } from './components/blacklist/blacklist-list/blacklist-list/blacklist-list.component';
 import { BlacklistUpdateComponent } from './components/blacklist/blacklist-update/blacklist-update/blacklist-update.component';
 import { LoginComponent } from './components/login/login/login.component';
+import { RegisterComponent } from './components/register/register/register.component';
+import { ApplicationAddComponent } from './components/application/applicantion-add/application-add/application-add.component';
+import { ApplicationListComponent } from './components/application/application-list/application-list/application-list.component';
+import { ApplicationUpdateComponent } from './components/application/application-update/application-update/application-update.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +61,11 @@ import { LoginComponent } from './components/login/login/login.component';
     BlacklistAddComponent,
     BlacklistListComponent,
     BlacklistUpdateComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    ApplicationAddComponent,
+    ApplicationListComponent,
+    ApplicationUpdateComponent
   ],
   imports: [
     BrowserModule,

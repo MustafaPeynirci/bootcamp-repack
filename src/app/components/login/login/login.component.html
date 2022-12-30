@@ -14,7 +14,7 @@
             </div>
             <h4>Welcome</h4>
             <h5 class="font-weight-light">Sign in to continue.</h5>
-            <form class="pt-3" >
+            <form class="pt-3" [formGroup]="loginForm" *ngIf="loginForm">
               <div class="form-group">
                 <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email"
                   formControlName="email">
@@ -25,15 +25,8 @@
               </div>
               <div class="mt-3">
                 <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
-                  (click)="employeeLogin()">SIGN IN</a>
-                <!-- href="../../index.html"  -->
+                  (click)="login()">SIGN IN</a>
               </div>
-              <div class="mt-3">
-                <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
-                  (click)="logout()">ÇIKIŞ</a>
-                <!-- href="../../index.html"  -->
-              </div>
-
               <div class="text-center mt-4 font-weight-light">
                 Don't have an account? <a routerLink="/register" class="text-primary">Create</a>
               </div>

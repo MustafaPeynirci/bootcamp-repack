@@ -1,3 +1,6 @@
+import { ApplicationListComponent } from './components/application/application-list/application-list/application-list.component';
+import { AuthGuard } from './guards/auth.guard';
+import { LoginComponent } from './components/login/login/login.component';
 import { BlacklistAddComponent } from './components/blacklist/blacklist-add/blacklist-add/blacklist-add.component';
 import { BlacklistListComponent } from './components/blacklist/blacklist-list/blacklist-list/blacklist-list.component';
 import { InstructorUpdateComponent } from './components/instructor/instructor-update/instructor-update/instructor-update.component';
@@ -20,10 +23,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: "", pathMatch: "full", component: IndexComponent },
+  { path: "login", component: LoginComponent },
 
   {
     path: "admin-panel",
     component: PanelIndexComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: "", component: HomeComponent },
       { path: "applicant-list", component: ApplicantListComponent },
@@ -44,8 +49,21 @@ const routes: Routes = [
 
       { path: "blacklist", component: BlacklistListComponent },
       { path: "applicant-list/blacklist-add/:id", component: BlacklistAddComponent }
+    
+    ]
+  },
+  {
+    path: "instructor-panel",
+    component: PanelIndexComponent,
+    canActivate: [AuthGuard],
+    children: [
+      { path: "", component: HomeComponent },
+      { path: "applicant-list", component: ApplicantListComponent },
+      { path: "bootcamp-list", component: BootcampListComponent },
+      { path: "blacklist", component: BlacklistListComponent },
+      { path: "instructor-update/:id", component: InstructorUpdateComponent },
+      { path: "application-list", component: ApplicationListComponent }
      
-
     ]
   }
 ];
