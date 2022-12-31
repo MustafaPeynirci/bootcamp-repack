@@ -1,3 +1,4 @@
+import { AuthGuard } from './../../../../guards/auth.guard';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { ApplicantService } from './../../../../services/applicant/applicant.service';
@@ -18,7 +19,8 @@ export class BlacklistListComponent implements OnInit {
     private blacklistService:BlacklistService,
     private applicantService:ApplicantService,
     private router:Router,
-    private toastr:ToastrService
+    private toastr:ToastrService,
+    public authGuard:AuthGuard
   ) { }
 
   ngOnInit(): void {

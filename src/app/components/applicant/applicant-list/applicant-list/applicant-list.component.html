@@ -13,7 +13,7 @@
                 <th>National Identity</th>
                 <th>About</th>
                 <th>Date Of Birth</th>
-                <th>Manage</th>
+                <th *ngIf="this.authGuard.userRoleIn == 'ROLE_EMPLOYEE'">Manage</th>
               </tr>
             </thead>
             <tbody>
@@ -24,7 +24,7 @@
                 <td>{{applicant.nationalIdentity}}</td>
                 <td>{{applicant.about}}</td>
                 <td>{{applicant.dateOfBirth}}</td>
-                <td>
+                <td *ngIf="this.authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
                   <button type="button" class="btn btn-outline-info btn-sm" routerLink="applicant-update/{{applicant.id}}">Update</button>
                   <button type="button" class="btn btn-outline-danger btn-sm ml-2" routerLink="blacklist-add/{{applicant.id}}">Add Black List</button>
                 </td>

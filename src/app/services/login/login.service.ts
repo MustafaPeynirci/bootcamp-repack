@@ -9,6 +9,7 @@ export class LoginService {
 
   userApiUrl = "http://localhost:3000/users"
   isLogin = false
+  roleAs:string
 
   constructor(private httpClient:HttpClient) { }
 
@@ -27,6 +28,11 @@ export class LoginService {
       this.isLogin = false
     }
     return this.isLogin
+  }
+
+  getRole() {
+    this.roleAs = localStorage.getItem('role');
+    return this.roleAs;
   }
 
 }

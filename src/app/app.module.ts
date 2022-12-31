@@ -1,5 +1,7 @@
+import { LoginReducer } from './store/reducer/login.reducer';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { StoreModule } from '@ngrx/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +37,7 @@ import { RegisterComponent } from './components/register/register/register.compo
 import { ApplicationAddComponent } from './components/application/applicantion-add/application-add/application-add.component';
 import { ApplicationListComponent } from './components/application/application-list/application-list/application-list.component';
 import { ApplicationUpdateComponent } from './components/application/application-update/application-update/application-update.component';
+
 
 @NgModule({
   declarations: [
@@ -73,6 +76,7 @@ import { ApplicationUpdateComponent } from './components/application/application
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    StoreModule.forRoot({"user":LoginReducer}),
     ToastrModule.forRoot({
       timeOut:3000,
       positionClass:'toast-top-right',

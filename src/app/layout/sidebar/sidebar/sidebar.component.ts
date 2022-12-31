@@ -1,3 +1,4 @@
+import { AuthGuard } from './../../../guards/auth.guard';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  getApplicant = ""
+  getInstructor = ""
+
+  constructor(public authGuard:AuthGuard) { }
 
   ngOnInit(): void {
+    this.getApplicant = localStorage.getItem("id")    
+    this.getInstructor = localStorage.getItem("id")
   }
 
 }

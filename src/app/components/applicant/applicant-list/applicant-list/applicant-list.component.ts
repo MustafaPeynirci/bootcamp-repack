@@ -1,3 +1,4 @@
+import { AuthGuard } from './../../../../guards/auth.guard';
 import { IApplicantAllModel } from './../../../../models/applicant/ApplicantAllModel';
 import { ApplicantService } from './../../../../services/applicant/applicant.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,7 +12,10 @@ export class ApplicantListComponent implements OnInit {
 
   allApplicantsList:IApplicantAllModel[] = []
 
-  constructor(private applicantService:ApplicantService) { }
+  constructor(
+    private applicantService:ApplicantService,
+    public authGuard:AuthGuard
+    ) { }
 
   ngOnInit(): void {
     this.getAllApplicants()

@@ -1,3 +1,4 @@
+import { AuthGuard } from './../../../../guards/auth.guard';
 import { BootcampService } from './../../../../services/bootcamp/bootcamp.service';
 import { IBootcampAllModel } from './../../../../models/bootcamp/BootcampAllModel';
 import { Component, OnInit } from '@angular/core';
@@ -12,7 +13,10 @@ export class BootcampListComponent implements OnInit {
   allBootcampsList:IBootcampAllModel[] = []
   selectedBootcamp:IBootcampAllModel
 
-  constructor(private bootcampService:BootcampService) { }
+  constructor(
+    private bootcampService:BootcampService,
+    public authGuard:AuthGuard
+    ) { }
 
   ngOnInit(): void {
     this.getBootcamps()
