@@ -2,6 +2,7 @@ import { InstructorService } from './../../../../services/instructor/instructor.
 import { IInstructorAllModel } from './../../../../models/instructor/InstructorAllModel';
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-instructor-list',
   templateUrl: './instructor-list.component.html',
@@ -11,7 +12,9 @@ export class InstructorListComponent implements OnInit {
 
   allInstructors:IInstructorAllModel[] = []
 
-  constructor(private instructorService:InstructorService) { }
+  constructor(private instructorService:InstructorService) {
+   
+   }
 
   ngOnInit(): void {
     this.getAllInstructors()

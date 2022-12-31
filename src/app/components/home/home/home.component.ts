@@ -26,10 +26,16 @@ export class HomeComponent implements OnInit {
     private store:Store<[Stores["user"]]>
     
   ) { 
-   this.store.select("values").subscribe((a)=>{
-  console.log(a);
+    //  this.store.subscribe((data)=>{
+    //    this.loginer$[0]=data;
+    //  })
+
+    //  this.store.select("user").subscribe((data)=>{
+    //    this.loginer$[0]=data;
+    //  })
+
     
-   })
+
   }
 
   ngOnInit(): void {
