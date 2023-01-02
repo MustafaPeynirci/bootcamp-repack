@@ -4,7 +4,7 @@
         <div class="col-md-12 grid-margin">
           <div class="row">
             <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-              <h2 class="font-weight-bold">Welcome<span class="font-weight"></span></h2>
+              <h2 class="font-weight-bold">Welcome<span class="font-weight"> {{userInfo}}</span></h2>
             </div>
             <div class="col-12 col-xl-4">
               <div class="justify-content-end d-flex">
@@ -62,8 +62,64 @@
           </div>
         </div>
       </div>
-  
-   
-  
+      <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title mb-0">Applications</p>
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Applicant Name</th>
+                      <th>Bootcamp Name</th>
+                      <th>Application State</th>
+                    </tr>
+                  </thead>
+                  <tbody *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
+                    <tr *ngFor="let application of allApplicationList">
+                      <td>{{ application.applicantName}}</td>
+                      <td>{{ application.bootcampName}}</td>
+                      <td>
+                        <span [ngClass]="{'badge badge-pill badge-warning' : application.applicationState == 'PENDING',
+                        'badge badge-pill badge-danger' : application.applicationState == 'DENIED',
+                        'badge badge-success' : application.applicationState == 'SELECTED'}">
+                          {{ application.applicationState }}
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tbody *ngIf="authGuard.userRoleIn == 'ROLE_APPLICANT'">
+                    <tr *ngFor="let application of applicationByIdList">
+                      <td>{{ application.applicantName}}</td>
+                      <td>{{ application.bootcampName}}</td>
+                      <td>
+                        <span [ngClass]="{'badge badge-pill badge-warning' : application.applicationState == 'PENDING',
+                        'badge badge-pill badge-danger' : application.applicationState == 'DENIED',
+                        'badge badge-success' : application.applicationState == 'SELECTED'}">
+                          {{ application.applicationState }}
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tbody *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
+                    <tr *ngFor="let application of allApplicationList">
+                      <td>{{ application.applicantName}}</td>
+                      <td>{{ application.bootcampName}}</td>
+                      <td>
+                        <span [ngClass]="{'badge badge-pill badge-warning' : application.applicationState == 'PENDING',
+                        'badge badge-pill badge-danger' : application.applicationState == 'DENIED',
+                        'badge badge-success' : application.applicationState == 'SELECTED'}">
+                          {{ application.applicationState }}
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
