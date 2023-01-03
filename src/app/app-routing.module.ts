@@ -1,3 +1,5 @@
+import { IndexAboutComponent } from './components/index-about/index-about/index-about.component';
+import { RegisterComponent } from './components/register/register/register.component';
 import { UpdateCurrentUserComponent } from './components/current-user/update-current-user/update-current-user/update-current-user.component';
 import { ApplicantListOfBootcampComponent } from './components/bootcamp/applicant-list-of-bootcamp/applicant-list-of-bootcamp/applicant-list-of-bootcamp.component';
 import { ApplicationListComponent } from './components/application/application-list/application-list/application-list.component';
@@ -26,6 +28,8 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: "", pathMatch: "full", component: IndexComponent },
   { path: "login", component: LoginComponent },
+  { path: "register", component: RegisterComponent },
+  { path: "index-about", component:IndexAboutComponent },
 
   {
     path: "admin-panel",

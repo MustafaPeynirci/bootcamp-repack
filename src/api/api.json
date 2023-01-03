@@ -39,6 +39,19 @@
       "role": "ROLE_INSTRUCTOR",
       "expiration": null,
       "id": 4
+    },
+    {
+      "firstName": "Hasan",
+      "lastName": "Sertkaya",
+      "email": "hasan@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678904",
+      "dateOfBirth": "2023-01-03",
+      "about": "abouts",
+      "role": "ROLE_APPLICANT",
+      "token": "03.01.2023 23:20:47",
+      "state": 1,
+      "id": 5
     }
   ],
   "bootcamps": [
@@ -81,8 +94,5 @@
       "token": "asddddaaasd",
       "role": "instructor"
     }
-    
   ]
-   
-  
 }
