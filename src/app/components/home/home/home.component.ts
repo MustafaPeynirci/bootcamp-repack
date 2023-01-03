@@ -27,7 +27,8 @@ export class HomeComponent implements OnInit {
   currentUserId = 0
   userInfo: string
   today: Date = new Date()
-  date:any = this.today.getDate() + "-" + this.today.getMonth() + "-" + this.today.getFullYear()
+  mounth = this.today.getMonth()+1
+  date:any = this.today.getDate() + "-" + this.mounth + "-" + this.today.getFullYear()
   
   // role:string=localStorage.getItem("role")
   // id=localStorage.getItem("id")

@@ -38,7 +38,6 @@ import { ApplicationAddComponent } from './components/application/applicantion-a
 import { ApplicationListComponent } from './components/application/application-list/application-list/application-list.component';
 import { ApplicationUpdateComponent } from './components/application/application-update/application-update/application-update.component';
 import { ApplicantListOfBootcampComponent } from './components/bootcamp/applicant-list-of-bootcamp/applicant-list-of-bootcamp/applicant-list-of-bootcamp.component';
-import { CurrentUserComponent } from './components/current-user/current-user/current-user/current-user.component';
 import { UpdateCurrentUserComponent } from './components/current-user/update-current-user/update-current-user/update-current-user.component';
 
 
@@ -73,7 +72,6 @@ import { UpdateCurrentUserComponent } from './components/current-user/update-cur
     ApplicationListComponent,
     ApplicationUpdateComponent,
     ApplicantListOfBootcampComponent,
-    CurrentUserComponent,
     UpdateCurrentUserComponent
   ],
   imports: [
