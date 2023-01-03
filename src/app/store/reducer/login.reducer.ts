@@ -4,10 +4,6 @@ import { createReducer, on } from "@ngrx/store";
 // import { loginAction } from '../actions/login.actions';
 import { state } from '@angular/animations';
 
-
-
-
-
 export const initalState:UserLogin[]=[]
 
  export const LoginReducer = createReducer(
