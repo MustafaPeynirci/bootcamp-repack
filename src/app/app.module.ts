@@ -37,6 +37,9 @@ import { RegisterComponent } from './components/register/register/register.compo
 import { ApplicationAddComponent } from './components/application/applicantion-add/application-add/application-add.component';
 import { ApplicationListComponent } from './components/application/application-list/application-list/application-list.component';
 import { ApplicationUpdateComponent } from './components/application/application-update/application-update/application-update.component';
+import { ApplicantListOfBootcampComponent } from './components/bootcamp/applicant-list-of-bootcamp/applicant-list-of-bootcamp/applicant-list-of-bootcamp.component';
+import { CurrentUserComponent } from './components/current-user/current-user/current-user/current-user.component';
+import { UpdateCurrentUserComponent } from './components/current-user/update-current-user/update-current-user/update-current-user.component';
 
 
 @NgModule({
@@ -68,7 +71,10 @@ import { ApplicationUpdateComponent } from './components/application/application
     RegisterComponent,
     ApplicationAddComponent,
     ApplicationListComponent,
-    ApplicationUpdateComponent
+    ApplicationUpdateComponent,
+    ApplicantListOfBootcampComponent,
+    CurrentUserComponent,
+    UpdateCurrentUserComponent
   ],
   imports: [
     BrowserModule,

@@ -34,7 +34,7 @@ export class IndexComponent implements OnInit {
   apply(bootcamp:any){
     if(localStorage.getItem("token")){
       if(localStorage.getItem("role") == "ROLE_EMPLOYEE"){
-        this.router.navigate(["admin-panel/bootcamp-list/bootcamp-update"])
+        this.router.navigate([`admin-panel/bootcamp-list/bootcamp-update/${bootcamp.id}`])
       }
       else if(localStorage.getItem("role") == "ROLE_APPLICANT"){
         this.router.navigate(["applicant-panel/bootcamp-list"])

@@ -160,8 +160,13 @@
                     </tr>
                   </thead>
                   <tbody>
-                   
-                   
+                      <tr *ngFor="let bootcamp of allBootcampList">
+                        <td>{{ bootcamp.name }}</td>
+                        <td class="font-weight-bold">{{ bootcamp.dateStart }}</td>
+                        <td class="font-weight-small">
+                          {{ bootcamp.instructorName }}
+                        </td>
+                      </tr>
                   </tbody>
                 </table>
               </div>
@@ -269,7 +274,7 @@
       <div class="col-md-12 card-bg p-30">
         <div
           class="card mb-3 img-animation"
-          
+          *ngFor="let bootcamp of allBootcampList"
         >
           <div class="row g-0">
             <div class="col-md-4">
@@ -280,7 +285,34 @@
               />
             </div>
             <div class="col-md-8">
-           
+              <div class="card-body">
+                <h5 class="card-title">{{ bootcamp.name }}</h5>
+                <p class="card-text">
+                  {{ bootcamp.dateStart }} - {{ bootcamp.dateEnd }}
+                  <span
+                    class="{{
+                      bootcamp.state == 1
+                        ? 'badge badge-success'
+                        : 'badge badge-danger'
+                    }} ml-2"
+                  >
+                    {{ bootcamp.state == 1 ? "Active" : "Passive" }}
+                  </span>
+                </p>
+                <p>{{ bootcamp.instructorName }}</p>
+                <p class="card-text">{{ bootcamp.explanation }}</p>
+                <div
+                  class="state d-flex justify-content-start"
+                  *ngIf="user !== 'ROLE_INSTRUCTOR'"
+                >
+                  <button
+                    class="btn btn-sm btn-outline-primary"
+                    (click)="apply(bootcamp)"
+                  >
+                    {{ user == "ROLE_EMPLOYEE" ? "Edit Bootcamp" : "Apply" }}
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

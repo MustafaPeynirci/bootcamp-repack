@@ -1,3 +1,5 @@
+import { UpdateCurrentUserComponent } from './components/current-user/update-current-user/update-current-user/update-current-user.component';
+import { ApplicantListOfBootcampComponent } from './components/bootcamp/applicant-list-of-bootcamp/applicant-list-of-bootcamp/applicant-list-of-bootcamp.component';
 import { ApplicationListComponent } from './components/application/application-list/application-list/application-list.component';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginComponent } from './components/login/login/login.component';
@@ -49,7 +51,6 @@ const routes: Routes = [
 
       { path: "blacklist", component: BlacklistListComponent },
       { path: "applicant-list/blacklist-add/:id", component: BlacklistAddComponent }
-    
     ]
   },
   {
@@ -62,8 +63,19 @@ const routes: Routes = [
       { path: "bootcamp-list", component: BootcampListComponent },
       { path: "blacklist", component: BlacklistListComponent },
       { path: "instructor-update/:id", component: InstructorUpdateComponent },
+      { path: "application-list", component: ApplicationListComponent },
+      { path: "bootcamp-list/detail-bootcamp/:id", component: ApplicantListOfBootcampComponent }   
+    ]
+  },
+  {
+    path: "applicant-panel",
+    component: PanelIndexComponent,
+    canActivate: [AuthGuard],
+    children: [
+      { path: "", component: HomeComponent },
+      { path: "user-update/:id", component: UpdateCurrentUserComponent },
+      { path: "bootcamp-list", component: BootcampListComponent },
       { path: "application-list", component: ApplicationListComponent }
-     
     ]
   }
 ];
