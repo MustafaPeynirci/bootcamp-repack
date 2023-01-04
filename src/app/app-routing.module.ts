@@ -1,3 +1,4 @@
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found/page-not-found.component';
 import { IndexAboutComponent } from './components/index-about/index-about/index-about.component';
 import { RegisterComponent } from './components/register/register/register.component';
 import { UpdateCurrentUserComponent } from './components/current-user/update-current-user/update-current-user/update-current-user.component';
@@ -81,7 +82,8 @@ const routes: Routes = [
       { path: "bootcamp-list", component: BootcampListComponent },
       { path: "application-list", component: ApplicationListComponent }
     ]
-  }
+  },
+  { path: "**", pathMatch: "full", component: PageNotFoundComponent }
 ];
 
 @NgModule({

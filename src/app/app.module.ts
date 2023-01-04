@@ -40,6 +40,7 @@ import { ApplicationUpdateComponent } from './components/application/application
 import { ApplicantListOfBootcampComponent } from './components/bootcamp/applicant-list-of-bootcamp/applicant-list-of-bootcamp/applicant-list-of-bootcamp.component';
 import { UpdateCurrentUserComponent } from './components/current-user/update-current-user/update-current-user/update-current-user.component';
 import { IndexAboutComponent } from './components/index-about/index-about/index-about.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { IndexAboutComponent } from './components/index-about/index-about/index-
     ApplicationUpdateComponent,
     ApplicantListOfBootcampComponent,
     UpdateCurrentUserComponent,
-    IndexAboutComponent
+    IndexAboutComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -26,6 +26,7 @@
             "styles": [
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/@mdi/font/css/materialdesignicons.css",
               "./node_modules/ngx-toastr/toastr.css",
               "./src/app/public/skydash/css/vertical-layout-light/style.css",
               "./src/app/public/skydash/vendors/feather/feather.css",
