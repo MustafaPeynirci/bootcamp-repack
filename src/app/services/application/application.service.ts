@@ -29,7 +29,7 @@ export class ApplicationService {
 
   getApplicationByApplicantId(id:any):Observable<IApplicationAllModel[]>{
     return this.httpClient.get<IApplicationAllModel[]>(
-      this.apiUrl + "?aplicantId=" + id
+      this.apiUrl + "?applicantId=" + id
     )
   }
 
@@ -46,7 +46,7 @@ export class ApplicationService {
   }
 
   updateApplication(id:number, data:IApplicationUpdateRequestModel){
-    return this.httpClient.put<IApplicationUpdateRequestModel>(
+    return this.httpClient.patch<IApplicationUpdateRequestModel>(
       this.apiUrl + "/" + id, data
     )
   }

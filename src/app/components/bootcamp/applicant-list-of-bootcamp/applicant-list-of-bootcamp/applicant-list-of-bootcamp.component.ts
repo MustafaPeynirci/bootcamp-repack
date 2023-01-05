@@ -40,8 +40,8 @@ export class ApplicantListOfBootcampComponent implements OnInit {
 
   getApplicantListByBootcamp(applicationAllModel:IApplicationAllModel[]){
     for(let application of applicationAllModel){
-      this.applicantService.getApplicantById(application.applicantId).subscribe((userx)=>{
-        this.applicantAllModel.push(userx)
+      this.applicantService.getApplicantById(application.applicantId).subscribe((usr)=>{
+        this.applicantAllModel.push(usr)
       })
     }
   }

@@ -7,6 +7,7 @@ import { AuthGuard } from './../../../../guards/auth.guard';
 import { BootcampService } from './../../../../services/bootcamp/bootcamp.service';
 import { IBootcampAllModel } from './../../../../models/bootcamp/BootcampAllModel';
 import { Component, OnInit } from '@angular/core';
+import { ApplicationStates } from 'src/app/enums/applicationState';
 
 @Component({
   selector: 'app-bootcamp-list',
@@ -63,8 +64,8 @@ export class BootcampListComponent implements OnInit {
     applicationData.bootcampName = this.bootcampModel.name
     this.applicantService.getApplicantById(parseInt(localStorage.getItem("id"))).subscribe((data)=>{
       applicationData.applicantName = data.firstName + " " + data.lastName
-      applicationData.applicationId = localStorage.getItem("id")
-      // applicationData.applicationState = ApplicationStates.PENDING
+      applicationData.applicantId = localStorage.getItem("id")
+      applicationData.applicationState = ApplicationStates.PENDING
     this.applicationService.addApplication(applicationData).subscribe((data)=>{
       this.toastr.success("Application")
     })  

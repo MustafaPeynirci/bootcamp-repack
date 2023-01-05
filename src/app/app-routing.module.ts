@@ -1,3 +1,4 @@
+import { ApplicationUpdateComponent } from './components/application/application-update/application-update/application-update.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found/page-not-found.component';
 import { IndexAboutComponent } from './components/index-about/index-about/index-about.component';
 import { RegisterComponent } from './components/register/register/register.component';
@@ -56,7 +57,8 @@ const routes: Routes = [
 
       { path: "blacklist", component: BlacklistListComponent },
       { path: "applicant-list/blacklist-add/:id", component: BlacklistAddComponent },
-      { path: "application-list", component: ApplicationListComponent }
+      { path: "application-list", component: ApplicationListComponent },
+      { path: "application-list/application-update/:id", component: ApplicationUpdateComponent }
     ]
   },
   {

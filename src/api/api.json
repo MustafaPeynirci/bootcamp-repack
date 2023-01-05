@@ -20,12 +20,12 @@
       "password": "1234",
       "nationalIdentity": "12345678902",
       "dateOfBirth": "2022-12-20",
-      "position": "Specialist",
+      "about": "Full Stack Developer",
+      "state": 1,
       "token": "20.12.2022 01:57:58",
       "role": "ROLE_APPLICANT",
       "expiration": null,
-      "id": 3,
-      "state": 0
+      "id": 3
     },
     {
       "firstName": "Engin",
@@ -47,41 +47,164 @@
       "password": "1234",
       "nationalIdentity": "12345678904",
       "dateOfBirth": "2023-01-03",
-      "about": "abouts",
-      "role": "ROLE_APPLICANT",
-      "token": "03.01.2023 23:20:47",
+      "about": "Front-End Developer",
       "state": 1,
+      "token": "03.01.2023 23:20:47",
+      "role": "ROLE_APPLICANT",
+      "expiration": null,
       "id": 5
+    },
+    {
+      "firstName": "Cemil",
+      "lastName": "Yankı",
+      "email": "cemil@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678905",
+      "dateOfBirth": "2023-01-06",
+      "about": "Back-End Developer",
+      "state": 0,
+      "token": "06.01.2023 01:58:21",
+      "role": "ROLE_APPLICANT",
+      "expiration": null,
+      "id": 6
+    },
+    {
+      "firstName": "Enes Bin",
+      "lastName": "Malik",
+      "email": "enes@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678906",
+      "dateOfBirth": "2023-01-06",
+      "position": "Specialist",
+      "token": "06.01.2023 02:04:03",
+      "role": "ROLE_EMPLOYEE",
+      "expiration": null,
+      "id": 7
+    },
+    {
+      "firstName": "Serhat",
+      "lastName": "Taşcı",
+      "email": "serhat@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678907",
+      "dateOfBirth": "2023-01-06",
+      "position": "Specialist Assistant",
+      "role": "ROLE_EMPLOYEE",
+      "token": "06.01.2023 02:06:59",
+      "id": 8
+    },
+    {
+      "firstName": "Can",
+      "lastName": "Kalay",
+      "email": "can@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678908",
+      "dateOfBirth": "2023-01-06",
+      "about": "Full Stack Developer",
+      "state": 1,
+      "token": "06.01.2023 02:08:08",
+      "role": "ROLE_APPLICANT",
+      "expiration": null,
+      "id": 9
+    },
+    {
+      "firstName": "Murat",
+      "lastName": "Yücedağ",
+      "email": "murat@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678909",
+      "dateOfBirth": "2023-01-06",
+      "companyName": "Udemy",
+      "token": "06.01.2023 02:09:30",
+      "role": "ROLE_INSTRUCTOR",
+      "expiration": null,
+      "id": 10
+    },
+    {
+      "firstName": "Gökhan",
+      "lastName": "Kandemir",
+      "email": "gökhan@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678900",
+      "dateOfBirth": "2023-01-06",
+      "companyName": "GKandemir",
+      "role": "ROLE_INSTRUCTOR",
+      "token": "06.01.2023 02:13:11",
+      "id": 11
     }
   ],
   "bootcamps": [
     {
-      "instructorId": "1",
-      "name": "MILTEK Front-end Developer Bootcamp",
-      "dateStart": "14-11-2022",
-      "dateEnd": "12-12-2022",
+      "instructorId": "4",
+      "name": "Yemeksepeti Go Bootcamp",
+      "dateStart": "2023-01-06",
+      "dateEnd": "2023-01-27",
       "state": "1",
-      "explanation": "It is the last of the important trainings held twice a year.",
-      "instructorName": "Mustafa Peynirci",
-      "id": 1
+      "explanation": "Code your own delicious story at Yemeksepeti",
+      "instructorName": "Engin Demiroğ",
+      "id": 2
+    },
+    {
+      "instructorId": "10",
+      "name": "iOS Developer Bootcamp with Swift",
+      "dateStart": "2023-01-09",
+      "dateEnd": "2023-01-30",
+      "state": "1",
+      "explanation": "iOS Development with Swift",
+      "instructorName": "Murat Yücedağ",
+      "id": 3
+    },
+    {
+      "instructorId": "11",
+      "name": "Vue.js Beginner Course",
+      "dateStart": "2023-01-06",
+      "dateEnd": "2023-01-25",
+      "state": "1",
+      "explanation": "The Vue",
+      "instructorName": "Gökhan Kandemir",
+      "id": 4
     }
   ],
   "applications": [
     {
-      "bootcampId": 1,
-      "bootcampName": "MILTEK Front-end Developer Bootcamp",
+      "bootcampId": 2,
+      "bootcampName": "Yemeksepeti Go Bootcamp",
       "applicantName": "Gürhan Koz",
-      "applicantId": "2",
-      "applicationState": "PENDING",
+      "applicantId": "3",
+      "applicationState": "SELECTED",
       "id": 1
+    },
+    {
+      "bootcampId": 3,
+      "bootcampName": "iOS Developer Bootcamp with Swift",
+      "applicantName": "Hasan Sertkaya",
+      "applicantId": "5",
+      "applicationState": "DENIED",
+      "id": 2
+    },
+    {
+      "bootcampId": 4,
+      "bootcampName": "Vue.js Beginner Course",
+      "applicantName": "Hasan Sertkaya",
+      "applicantId": "5",
+      "applicationState": "SELECTED",
+      "id": 3
+    },
+    {
+      "bootcampId": 4,
+      "bootcampName": "Vue.js Beginner Course",
+      "applicantName": "Cemil Yankı",
+      "applicantId": "6",
+      "applicationState": "PENDING",
+      "id": 4
     }
   ],
   "blacklist": [
     {
-      "reason": "testing",
-      "date": "24-11-2022",
-      "applicantId": "3",
-      "applicantName": "Gürhan Koz",
+      "reason": "Registered but not attended.",
+      "date": "6-0-2023",
+      "applicantId": "6",
+      "applicantName": "Cemil Yankı",
       "id": 1
     }
   ],

@@ -29,12 +29,19 @@ export class BootcampUpdateComponent implements OnInit {
 
   ngOnInit(): void {
     this.getBootcampById()
+    this.getAllInstructors()
   }
 
   getBootcampById(){
     this.bootcampService.getBootcampById(this.activatedRoute.snapshot.params['id']).subscribe((data)=>{
       this.getBootcamp = data
       this.createUpdateBootcampForm()
+    })
+  }
+
+  getAllInstructors(){
+    this.instructorService.getAllInstructors().subscribe((data)=>{
+      this.instructors = data
     })
   }
 

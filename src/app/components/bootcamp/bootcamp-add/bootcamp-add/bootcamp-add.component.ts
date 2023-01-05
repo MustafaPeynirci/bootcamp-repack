@@ -28,6 +28,13 @@ export class BootcampAddComponent implements OnInit {
 
   ngOnInit(): void {
     this.createAddBootcampForm()
+    this.getAllInstuctors()
+  }
+
+  getAllInstuctors(){
+    this.instructorService.getAllInstructors().subscribe((data)=>{
+      this.instructors = data
+    })
   }
 
   createAddBootcampForm(){

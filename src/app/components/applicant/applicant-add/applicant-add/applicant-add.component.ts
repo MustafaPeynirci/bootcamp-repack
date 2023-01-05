@@ -40,7 +40,7 @@ export class ApplicantAddComponent implements OnInit {
   addApplicant(){
     if(this.addApplicantForm.valid){
         let applicantModel = Object.assign({}, this.addApplicantForm.value)
-        applicantModel.role = "ROLE_APPLİCANT"
+        applicantModel.role = "ROLE_APPLICANT"
         applicantModel.token = new Date().toLocaleString()
         this.addApplicantForm.reset()
         this.applicantService.addApplicant(applicantModel).subscribe((data) => {
