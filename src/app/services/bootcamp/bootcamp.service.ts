@@ -27,6 +27,12 @@ export class BootcampService {
     )
   }
 
+  getBootcampsByInstructorId(id:number):Observable<IBootcampAllModel[]>{
+    return this.httpClient.get<IBootcampAllModel[]>(
+      this.apiUrl + "?instructorId=" + id
+    )
+  }
+
   addBootcamp(data:IBootcampAddRequestModel):Observable<IBootcampAddRequestModel>{
     return this.httpClient.post<IBootcampAddRequestModel>(
       this.apiUrl, data

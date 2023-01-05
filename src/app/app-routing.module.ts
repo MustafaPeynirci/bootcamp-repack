@@ -55,7 +55,8 @@ const routes: Routes = [
       { path: "instructor-list/instructor-update/:id", component: InstructorUpdateComponent },
 
       { path: "blacklist", component: BlacklistListComponent },
-      { path: "applicant-list/blacklist-add/:id", component: BlacklistAddComponent }
+      { path: "applicant-list/blacklist-add/:id", component: BlacklistAddComponent },
+      { path: "application-list", component: ApplicationListComponent }
     ]
   },
   {

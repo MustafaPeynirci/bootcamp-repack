@@ -17,7 +17,7 @@ export class EmployeeService {
 
   getAllEmployees():Observable<IEmployeeAllModel[]>{
     return this.httpClient.get<IEmployeeAllModel[]>(
-      this.apiUrl
+      this.apiUrl + "?role=ROLE_EMPLOYEE"
     )
   }
 

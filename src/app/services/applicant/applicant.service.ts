@@ -16,7 +16,7 @@ export class ApplicantService {
 
   getAllApplicants():Observable<IApplicantAllModel[]>{
     return this.httpClient.get<IApplicantAllModel[]>(
-      this.apiUrl
+      this.apiUrl + "?role=ROLE_APPLICANT" + "&state=1"
     )
   }
 

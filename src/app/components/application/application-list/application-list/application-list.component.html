@@ -1,1 +1,48 @@
-<p>application-list works!</p>
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Application</h4>
+        <p class="card-description">List</p>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">Applicant Name</th>
+                <th>Bootcamp Name</th>
+                <th>Application State</th>
+                <th *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">Manage</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
+              <tr *ngFor="let application of allApplicationList">
+                <td>{{ application.applicantName}}</td>
+                <td>{{ application.bootcampName}}</td>
+                <td>
+                  <span [ngClass]="{'badge badge-pill badge-warning' : application.applicationState == 'PENDING',
+                  'badge badge-pill badge-danger' : application.applicationState == 'DENIED',
+                  'badge badge-success' : application.applicationState == 'SELECTED'}">
+                    {{ application.applicationState }}
+                  </span>
+                </td>
+                <td> <button type="button" class="btn btn-outline-info btn-sm" id="updateButton"
+                  *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'"
+                   data-toggle="modal" data-target="#applicationModal" routerLink="application-update/{{application.id}}">Update</button></td>
+              </tr>
+            </tbody>
+            <tbody *ngIf="authGuard.userRoleIn == 'ROLE_APPLICANT'">
+              <tr *ngFor="let application of applicationByIdList">
+                <td>{{ application.bootcampName}}</td>
+                <td>
+                  <span [ngClass]="{'badge badge-pill badge-warning' : application.applicationState == 'PENDING',
+                  'badge badge-pill badge-danger' : application.applicationState == 'DENIED',
+                  'badge badge-success' : application.applicationState == 'SELECTED'}">
+                    {{ application.applicationState }}
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>  

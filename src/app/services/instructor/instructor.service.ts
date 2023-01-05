@@ -18,7 +18,7 @@ export class InstructorService {
 
   getAllInstructors():Observable<IInstructorAllModel[]>{
     return this.httpClient.get<IInstructorAllModel[]>(
-      this.apiUrl
+      this.apiUrl + "?role=ROLE_INSTRUCTOR"
     )
   }
 
