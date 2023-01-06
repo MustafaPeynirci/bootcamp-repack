@@ -32,7 +32,18 @@ export class NaviComponent implements OnInit {
   getUser(){
     this.currentUserId = JSON.parse(localStorage.getItem("id"))
     this.applicantService.getApplicantById(this.currentUserId).subscribe((data)=>{
-      this.userInfo = `${data.firstName}`
+
+      if(data.role == "ROLE_EMPLOYEE"){
+        data.role = "[ Employee ]"      
+      }
+      if(data.role == "ROLE_INSTRUCTOR"){
+        data.role = "[ Instructor ]"      
+      }
+      if(data.role == "ROLE_APPLICANT"){
+        data.role = "[ Applicant ]"      
+      }
+
+      this.userInfo = `${data.firstName} ${data.lastName} ${data.role}`
     })
   }
 

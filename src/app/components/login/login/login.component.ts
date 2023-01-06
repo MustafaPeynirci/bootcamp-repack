@@ -34,7 +34,19 @@ export class LoginComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.createLoginForm()
+    if (localStorage.getItem('role') == 'ROLE_EMPLOYEE')
+    {
+      this.router.navigate(['admin-panel'])
+    } 
+    else if (localStorage.getItem('role') == 'ROLE_INSTRUCTOR') 
+    {
+      this.router.navigate(['instructor-panel'])
+    } 
+    else if (localStorage.getItem('role') == 'ROLE_APPLICANT') 
+    {
+      this.router.navigate(['applicant-panel'])
+    } 
+    else {this.createLoginForm()}
   }
 
   createLoginForm(){
@@ -65,7 +77,7 @@ export class LoginComponent implements OnInit {
 
           let loginUser = new UserLogin();
           loginUser.User=this.Users[0]
-          console.log(loginUser)
+          // console.log(loginUser)
           this.store.dispatch(LoginAction.loginAction({"user":loginUser}))
         }
         else{

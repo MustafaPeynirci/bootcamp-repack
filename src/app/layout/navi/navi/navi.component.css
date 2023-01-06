@@ -1,0 +1,10 @@
+.home-button{
+    color: var(--bs-btn-active-color);
+    background-color: var(--bs-btn-active-bg);
+    border-color: var(--bs-btn-active-border-color);
+}
+
+.home-button:hover{
+    color: white;
+    background-color: #aaa;
+}

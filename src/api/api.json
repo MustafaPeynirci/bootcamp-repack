@@ -207,15 +207,5 @@
       "applicantName": "Cemil Yankı",
       "id": 1
     }
-  ],
-  "authToken": [
-    {
-      "token": "dsfdsffdjfnjdskue",
-      "role": "employee"
-    },
-    {
-      "token": "asddddaaasd",
-      "role": "instructor"
-    }
   ]
 }
